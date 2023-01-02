@@ -302,7 +302,7 @@ def call_convert_save_nifti_to_dicom():
         if out_path:
             for i, image in enumerate(images):
                 text_message_n_d.config(text='Converting...')
-                o_path = out_path + '/' + os.path.basename(image)[:-7]
+                o_path = out_path + '/' + os.path.basename(image)[:-4]
                 if not os.path.exists(o_path): os.makedirs(o_path)
 
                 convert_nifti_to_dicom(image, o_path)
