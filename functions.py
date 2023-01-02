@@ -76,7 +76,7 @@ def writeSlices(series_tag_values, new_img, i, out_dir):
 
 
 def convert_nifti_to_dicom(in_dir, out_dir):
-    new_img = sitk.ReadImage(in_dir) 
+    new_img = sitk.ReadImage(in_dir, sitk.sitkInt16)
     modification_time = time.strftime("%H%M%S")
     modification_date = time.strftime("%Y%m%d")
 
